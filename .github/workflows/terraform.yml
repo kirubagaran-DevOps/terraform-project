@@ -16,3 +16,7 @@ jobs:
 
       - name: Terraform Version
         run: terraform version
+        
+      - name: Terraform Init
+        working-directory: environments/dev
+        run: terraform init
