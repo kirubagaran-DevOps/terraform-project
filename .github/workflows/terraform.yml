@@ -31,3 +31,9 @@ jobs:
       - name: Terraform Init
         working-directory: environments/dev
         run: terraform init
+      -name: Terraform Plan 
+        working-directory: environments/dev
+        run: terraform plan -var-file="dev.tfvars"
+      -name: Terraform Apply
+        working-directory: environments/dev
+        run: terraform apply -var-file="dev.tfvars"
